@@ -1,0 +1,15 @@
+h3{
+    font-family: 'Cookie';
+    font-size: 60px !important;
+    background-color:blue;
+    color:cornsilk;
+}
+
+a{
+    font-family: 'Patrick Hand';
+    font-size: 30px;
+    background-color: peachpuff;
+    border-radius: 10px;
+    width: 200px;
+    
+}
