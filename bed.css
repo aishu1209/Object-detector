@@ -1,0 +1,21 @@
+h3{
+    font-family: 'Cookie';
+    font-size: 60px !important;
+    color:cornsilk;
+}
+
+#back{
+
+    font-family: 'Patrick Hand';
+    font-size: 45px !important;
+    left:100px;
+    position:absolute;
+}
+
+h2{
+    font-size: 20px !important;
+}
+
+canvas{
+    box-shadow: 5px 35px 5px gray;
+}
