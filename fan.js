@@ -4,7 +4,7 @@ img = "";
 
 
 function setup(){
-    canvas = createCanvas(640,420);
+    canvas = createCanvas(300,470);
     canvas.center();
     objectDetector = ml5.objectDetector("cocossd", modelLoaded);
     document.getElementById("status").innerHTML = "Status: Detecting Objects";
@@ -14,12 +14,12 @@ function setup(){
 }
 
 function preload(){
-    img = loadImage('bed.jpeg');
+    img = loadImage('fan.jpeg');
 }
 
 function draw(){
 
-    image(img,0,0,640,420);
+    image(img,0,0,300,470);
 
     if(status1 != ""){
         for(i = 0; i < objects.length; i++){
@@ -27,8 +27,9 @@ function draw(){
             fill("#FF0000");
             percent = floor(objects[i].confidence * 100);
             text(objects[i].label + " " + percent + "%", objects[i].x , objects[i].y - 1025 );
+            console.log(objects[i].label + " " + percent + "%", objects[i].x , objects[i].y - 1025 );
+            console.log(i);
             noFill();
-            console.log(objects[i].x + "," + objects[i].y);
             stroke("#FF0000");
             rect(objects[i].x, objects[i].y - 1025, objects[i].width, objects[i].height);
             document.getElementById("object_number").innerHTML = "There is 1 big object in the picture from which CocoSsd has detected 1";
@@ -57,5 +58,4 @@ function gotResults(error,results){
 
 
 function back(){
-    window.location.href = "index.html";
-}
+    window.location.href = "index.html"};

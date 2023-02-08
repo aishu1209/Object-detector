@@ -14,7 +14,7 @@ function setup(){
 }
 
 function preload(){
-    img = loadImage('bed.jpeg');
+    img = loadImage('canvas.jpeg');
 }
 
 function draw(){
@@ -28,7 +28,6 @@ function draw(){
             percent = floor(objects[i].confidence * 100);
             text(objects[i].label + " " + percent + "%", objects[i].x , objects[i].y - 1025 );
             noFill();
-            console.log(objects[i].x + "," + objects[i].y);
             stroke("#FF0000");
             rect(objects[i].x, objects[i].y - 1025, objects[i].width, objects[i].height);
             document.getElementById("object_number").innerHTML = "There is 1 big object in the picture from which CocoSsd has detected 1";

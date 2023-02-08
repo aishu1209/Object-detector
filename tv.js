@@ -14,7 +14,7 @@ function setup(){
 }
 
 function preload(){
-    img = loadImage('bed.jpeg');
+    img = loadImage('tv.jpeg');
 }
 
 function draw(){
@@ -26,11 +26,12 @@ function draw(){
             document.getElementById("status").innerHTML = "Status: Objects Detected";
             fill("#FF0000");
             percent = floor(objects[i].confidence * 100);
-            text(objects[i].label + " " + percent + "%", objects[i].x , objects[i].y - 1025 );
+            text(objects[i].label + " " + percent + "%", objects[i].x -450, objects[i].y - 720 );
+            //console.log(objects[i].label + " " + percent + "%", objects[i].x -300, objects[i].y - 400 );
+            console.log(i);
             noFill();
-            console.log(objects[i].x + "," + objects[i].y);
             stroke("#FF0000");
-            rect(objects[i].x, objects[i].y - 1025, objects[i].width, objects[i].height);
+            rect(objects[i].x - 450, objects[i].y - 720, objects[i].width, objects[i].height);
             document.getElementById("object_number").innerHTML = "There is 1 big object in the picture from which CocoSsd has detected 1";
             
         }
@@ -57,5 +58,4 @@ function gotResults(error,results){
 
 
 function back(){
-    window.location.href = "index.html";
-}
+    window.location.href = "index.html"};
